@@ -4,7 +4,7 @@ from numpy import random
 import pandas as pd
 from faker import Faker
 from flask import Flask, jsonify, request
-
+#####
 
 def _generate_events(end_date):
     events = pd.concat(
@@ -24,6 +24,7 @@ def _generate_events_for_day(date):
     n_users = random_state.randint(low=50, high=100)
     n_events = random_state.randint(low=200, high=2000)
     fake = Faker()
+    print("hi")
     users = [fake.ipv4() for _ in range(n_users)]
     return pd.DataFrame(
         {
